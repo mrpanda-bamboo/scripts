@@ -1,0 +1,117 @@
+# 🚀 Windows App Installer (winget)
+
+A PowerShell script that bulk-installs Windows applications via [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) using an interactive, keyboard-driven selection menu.
+
+## Features
+
+- **Interactive TUI** — Navigate with arrow keys, toggle apps with `Space`, confirm with `Enter`.
+- **Categorised apps** — Applications are grouped by purpose for quick browsing.
+- **Silent install** — Every selected app installs silently in the background with auto-accepted agreements.
+- **Queue summary** — Review exactly what will be installed before the process starts.
+
+## Prerequisites
+
+| Requirement | Notes |
+|---|---|
+| **Windows 10 / 11** | winget is pre-installed on recent builds. |
+| **winget** | Verify by running `winget --version` in a terminal. If missing, install *App Installer* from the Microsoft Store. |
+| **PowerShell 5.1+** | Ships with Windows. PowerShell 7 works too. |
+
+## Quick Start
+
+1. **Clone or download** this repository.
+2. Open **PowerShell** in the script's directory.
+3. Run the installer:
+   ```powershell
+   .\installation_script_apps.ps1
+   ```
+4. Use the interactive menu to pick your apps:
+   - `↑` / `↓` — Move the highlight up or down.
+   - `Space` — Toggle the highlighted app on or off.
+   - `Enter` — Confirm your selection and begin installation.
+5. Sit back — the script installs everything automatically.
+
+> **Tip:** If execution policies block the script, run  
+> `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` first.
+
+## Included Applications
+
+### 🌐 Browsers & Security
+| App | winget ID |
+|---|---|
+| Brave Browser | `Brave.Brave` |
+| Tor Browser | `TorProject.TorBrowser` |
+| Nmap | `insecure.nmap` |
+| Wireshark | `WiresharkFoundation.Wireshark` |
+| Burp Suite Community | `PortSwigger.BurpSuite.Community` |
+
+### 🛠️ Development Tools
+| App | winget ID |
+|---|---|
+| Visual Studio Code | `Microsoft.VisualStudioCode` |
+| Docker Desktop | `Docker.DockerDesktop` |
+| Python 3 | `Python.Python.3.0` |
+| Git | `Git.Git` |
+| Claude Code (Anthropic) | `Anthropic.ClaudeCode` |
+| Antigravity (Google) | `Google.Antigravity` |
+
+### ⚙️ Utilities
+| App | winget ID |
+|---|---|
+| 7-Zip | `7zip.7zip` |
+| Rufus | `Rufus.Rufus` |
+| TreeSize Free | `JAMSoftware.TreeSize.Free` |
+| TranslucentTB | `CharlesMilette.TranslucentTB` |
+| qFlipper | `FlipperDevicesInc.qFlipper` |
+
+### 🔗 Networking & Admin
+| App | winget ID |
+|---|---|
+| PuTTY | `PuTTY.PuTTY` |
+| WinSCP | `WinSCP.WinSCP` |
+| Process Explorer | `Microsoft.Sysinternals.ProcessExplorer` |
+| OpenVPN | `OpenVPNTechnologies.OpenVPN` |
+| TeamViewer | `TeamViewer.TeamViewer` |
+| VirtualBox | `Oracle.VirtualBox` |
+
+### 📝 Productivity
+| App | winget ID |
+|---|---|
+| Notepad++ | `Notepad++.Notepad++` |
+| Notion | `Notion.Notion` |
+| Obsidian | `Obsidian.Obsidian` |
+| Adobe Acrobat Reader (64-bit) | `Adobe.Acrobat.Reader.64-bit` |
+
+### 💬 Communication & Entertainment
+| App | winget ID |
+|---|---|
+| Discord | `Discord.Discord` |
+| Spotify | `Spotify.Spotify` |
+
+### 🎮 Gaming
+| App | winget ID |
+|---|---|
+| Steam | `Valve.Steam` |
+| Epic Games Launcher | `EpicGames.EpicGamesLauncher` |
+| Ubisoft Connect | `Ubisoft.Connect` |
+| EA Desktop | `ElectronicArts.EADesktop` |
+
+## winget Cheat Sheet
+
+```powershell
+# Search for a package
+winget search <name>
+
+# Install a package by exact ID
+winget install --id <winget.ID> -e
+
+# List installed packages
+winget list
+
+# Upgrade all installed packages
+winget upgrade --all
+```
+
+## License
+
+This project is provided as-is for personal use. Feel free to modify and redistribute.
