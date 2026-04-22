@@ -3,6 +3,31 @@
 #  Navigate: Up/Down   Toggle: Space   Next Section: Enter
 # ============================================================
 
+# ---------- Require Administrator privileges ----------
+$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(
+    [Security.Principal.WindowsBuiltInRole]::Administrator
+)
+
+if (-not $isAdmin) {
+    Write-Host ""
+    Write-Host "  This script requires Administrator privileges." -ForegroundColor Yellow
+    Write-Host "  Requesting elevation..." -ForegroundColor Yellow
+    Write-Host ""
+
+    try {
+        $scriptPath = $MyInvocation.MyCommand.Path
+        Start-Process powershell.exe -Verb RunAs -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
+        exit
+    }
+    catch {
+        Write-Host "  ERROR: Failed to obtain Administrator privileges." -ForegroundColor Red
+        Write-Host "  Please right-click the script and select 'Run as Administrator'." -ForegroundColor Red
+        Write-Host ""
+        Pause
+        exit 1
+    }
+}
+
 # ---------- App catalogue (grouped by category) ----------
 $categories = [ordered]@{
     "Browsers and Security"        = @(

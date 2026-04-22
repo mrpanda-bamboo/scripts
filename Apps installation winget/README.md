@@ -4,8 +4,9 @@ A PowerShell script that bulk-installs Windows applications via [winget](https:/
 
 ## Features
 
+- **Auto-elevation** — The script automatically requests Administrator privileges via UAC when launched.
 - **Interactive TUI** — Navigate with arrow keys, toggle apps with `Space`, confirm with `Enter`.
-- **Categorised apps** — Applications are grouped by purpose for quick browsing.
+- **Section-based browsing** — Apps are grouped by category; press `Enter` to advance to the next section.
 - **Silent install** — Every selected app installs silently in the background with auto-accepted agreements.
 - **Queue summary** — Review exactly what will be installed before the process starts.
 
@@ -25,14 +26,15 @@ A PowerShell script that bulk-installs Windows applications via [winget](https:/
    ```powershell
    .\installation_script_apps.ps1
    ```
-4. Use the interactive menu to pick your apps:
+4. A **UAC prompt** will appear — accept it to grant Administrator privileges.
+5. Use the interactive menu to pick your apps:
    - `↑` / `↓` — Move the highlight up or down.
    - `Space` — Toggle the highlighted app on or off.
-   - `Enter` — Confirm your selection and begin installation.
-5. Sit back — the script installs everything automatically.
+   - `Enter` — Confirm your selection and move to the next category.
+6. After the last category, the script shows a summary and installs everything automatically.
 
-> **Tip:** If execution policies block the script, run  
-> `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` first.
+> **Note:** If you decline the UAC prompt, the script will display an error and exit.
+> You can also right-click the script and select *Run as Administrator* manually.
 
 ## Included Applications
 
