@@ -36,6 +36,9 @@ A PowerShell script that bulk-installs Windows applications via [winget](https:/
 > **Note:** If you decline the UAC prompt, the script will display an error and exit.
 > You can also right-click the script and select *Run as Administrator* manually.
 
+> **Tip:** If execution policies block the script, run
+> `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` first.
+
 ## Included Applications
 
 ### 🌐 Browsers & Security
