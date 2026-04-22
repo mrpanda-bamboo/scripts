@@ -15,8 +15,11 @@ if (-not $isAdmin) {
     Write-Host ""
 
     try {
-        $scriptPath = $MyInvocation.MyCommand.Path
-        Start-Process powershell.exe -Verb RunAs -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
+        $scriptPath = $PSCommandPath
+        if (-not $scriptPath) { $scriptPath = $MyInvocation.MyCommand.Path }
+        
+        $psArgs = @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", $scriptPath)
+        Start-Process powershell.exe -Verb RunAs -ArgumentList $psArgs
         exit
     }
     catch {
@@ -186,7 +189,7 @@ $failed = 0
 
 foreach ($app in $selectedApps) {
     Write-Host "  Installing $app ..." -ForegroundColor Cyan
-    winget install --id $app -e --silent --accept-source-agreements --accept-package-agreements
+    winget install --id $app -e --silent --accept-source-agreements --accept-package-agreements --source winget
     if ($LASTEXITCODE -eq 0) {
         Write-Host "  OK   - $app" -ForegroundColor Green
         $success = $success + 1
