@@ -21,17 +21,18 @@ A PowerShell script that bulk-installs Windows applications via [winget](https:/
 ## Quick Start
 
 1. **Clone or download** this repository.
-2. Open **PowerShell** in the script's directory.
-3. Run the installer:
+2. Press **Win + R** to open the Run dialog.
+3. Type the following command (replace the path with your actual path to the script):
    ```powershell
-   .\installation_script_apps.ps1
+   powershell.exe -ExecutionPolicy Bypass -File "C:\path\to\installation_script_apps.ps1"
    ```
-4. A **UAC prompt** will appear — accept it to grant Administrator privileges.
-5. Use the interactive menu to pick your apps:
+4. Press **Ctrl + Shift + Enter** to run it as Administrator.
+5. A **UAC prompt** will appear — accept it to grant Administrator privileges.
+6. Use the interactive menu to pick your apps:
    - `↑` / `↓` — Move the highlight up or down.
    - `Space` — Toggle the highlighted app on or off.
    - `Enter` — Confirm your selection and move to the next category.
-6. After the last category, the script shows a summary and installs everything automatically.
+7. After the last category, the script shows a summary and installs everything automatically.
 
 > **Note:** If you decline the UAC prompt, the script will display an error and exit.
 > You can also right-click the script and select *Run as Administrator* manually.
