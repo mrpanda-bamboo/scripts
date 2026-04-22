@@ -6,6 +6,7 @@ A small collection of Windows utility scripts for app installation and startup i
 
 ### [`Apps installation winget/`](Apps%20installation%20winget/)
 - Interactive PowerShell installer that bulk-installs apps via `winget`.
+- **Auto-elevation** — automatically requests Administrator privileges via UAC on launch.
 - **Section-based TUI** — browse one category at a time using keyboard controls:
   - `↑` / `↓` — Navigate apps
   - `Space` — Toggle an app on or off
@@ -40,5 +41,6 @@ A small collection of Windows utility scripts for app installation and startup i
    ```
 
 ## Notes
+- The installer automatically elevates to Administrator — no need to right-click "Run as Administrator".
 - The installer uses a section-by-section interactive menu — no more yes/no prompts for each app.
 - The autostart script provides a quick overview of all startup locations and registry run keys.
