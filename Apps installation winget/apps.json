@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "name": "Browsers & Security",
+      "apps": [
+        { "name": "Brave Browser", "id": "Brave.Brave" },
+        { "name": "Tor Browser", "id": "TorProject.TorBrowser" },
+        { "name": "1Password", "id": "AgileBits.1Password" },
+        { "name": "Nmap", "id": "Insecure.Nmap" },
+        { "name": "Wireshark", "id": "WiresharkFoundation.Wireshark" },
+        { "name": "Burp Suite Community", "id": "PortSwigger.BurpSuite.Community" }
+      ]
+    },
+    {
+      "name": "AI Tools",
+      "apps": [
+        { "name": "Claude (Desktop)", "id": "Anthropic.Claude" },
+        { "name": "Claude Code (CLI)", "id": "Anthropic.ClaudeCode", "verifyCommand": "claude" },
+        { "name": "Antigravity (Google)", "id": "Google.Antigravity" }
+      ]
+    },
+    {
+      "name": "Development Tools",
+      "apps": [
+        { "name": "Visual Studio Code", "id": "Microsoft.VisualStudioCode" },
+        { "name": "Docker Desktop", "id": "Docker.DockerDesktop" },
+        { "name": "Python 3.13", "id": "Python.Python.3.13" },
+        { "name": "Git", "id": "Git.Git" }
+      ]
+    },
+    {
+      "name": "Utilities",
+      "apps": [
+        { "name": "7-Zip", "id": "7zip.7zip" },
+        { "name": "Rufus", "id": "Rufus.Rufus" },
+        { "name": "TreeSize Free", "id": "JAMSoftware.TreeSize.Free" },
+        { "name": "TranslucentTB", "id": "CharlesMilette.TranslucentTB" },
+        { "name": "qFlipper", "id": "FlipperDevicesInc.qFlipper" },
+        { "name": "Mouse Jiggler", "id": "ArkaneSystems.MouseJiggler" },
+        { "name": "OP Auto Clicker", "id": "OPAutoClicker.OPAutoClicker" }
+      ]
+    },
+    {
+      "name": "Networking & Admin",
+      "apps": [
+        { "name": "PuTTY", "id": "PuTTY.PuTTY" },
+        { "name": "WinSCP", "id": "WinSCP.WinSCP" },
+        { "name": "Process Explorer", "id": "Microsoft.Sysinternals.ProcessExplorer" },
+        { "name": "OpenVPN", "id": "OpenVPNTechnologies.OpenVPN" },
+        { "name": "TeamViewer (Full Client)", "id": "TeamViewer.TeamViewer", "conflicts": [ "TeamViewer.TeamViewer.Host" ] },
+        { "name": "VirtualBox", "id": "Oracle.VirtualBox" }
+      ]
+    },
+    {
+      "name": "Productivity",
+      "apps": [
+        { "name": "Notepad++", "id": "Notepad++.Notepad++" },
+        { "name": "Notion", "id": "Notion.Notion" },
+        { "name": "Obsidian", "id": "Obsidian.Obsidian" },
+        { "name": "Adobe Acrobat Reader (64-bit)", "id": "Adobe.Acrobat.Reader.64-bit" },
+        { "name": "Microsoft 365 Apps", "id": "Microsoft.Office" }
+      ]
+    },
+    {
+      "name": "Communication & Entertainment",
+      "apps": [
+        { "name": "Discord", "id": "Discord.Discord" },
+        { "name": "Spotify", "id": "Spotify.Spotify", "noAdmin": true }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "apps": [
+        { "name": "Steam", "id": "Valve.Steam" },
+        { "name": "Epic Games Launcher", "id": "EpicGames.EpicGamesLauncher" },
+        { "name": "Ubisoft Connect", "id": "Ubisoft.Connect" },
+        { "name": "EA Desktop", "id": "ElectronicArts.EADesktop" }
+      ]
+    }
+  ]
+}
